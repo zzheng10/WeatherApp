@@ -1,0 +1,10 @@
+.weatherCard{
+    padding-top: 5px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom,rgb(43, 75, 161),lightblue);
+    width: 275px;
+    height: 415px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}

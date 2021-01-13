@@ -1,0 +1,29 @@
+.searchBar{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 25px;
+}
+
+.searchCity{
+    border: 5px solid #135a7a;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    width: 250px;
+    border-radius: 5px 0 0 5px;
+    color: #24221f;
+}
+
+.searchButton{
+    border: 5px solid #135a7a;
+    background: #135a7a;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.weather{
+    padding-top: 50px
+}
