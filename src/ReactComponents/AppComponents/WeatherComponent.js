@@ -25,7 +25,8 @@ class WeatherComponent extends React.Component {
 
     componentDidMount() {
         this.setState({ loading: true })
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.cityName}&units=metric&appid=4ffe715e32dc7517ae29b766a96cc139`)
+        const apiKey = "4ffe715e32dc7517ae29b766a96cc139"
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.props.cityName}&units=metric&appid=${apiKey}`)
             .then(response => response.json())
             .then(data => {
                 if (data.cod === "404" || data.cod === "400") {
@@ -85,11 +86,12 @@ class WeatherComponent extends React.Component {
             return ("")
         }
         let dt = d.split(" ")[0].split("-")
-        let date = new Date(parseInt(dt[0]), parseInt(dt[1] - 1), parseInt(dt[2] - 1))
+        let date = new Date(parseInt(dt[0]), parseInt(dt[1] - 1), parseInt(dt[2]))
         return (date.toString().split(" ")[0])
     }
 
     render() {
+        console.log(this.state.weather)
         return (
             <div>
                 {!this.state.loading &&

@@ -7,3 +7,20 @@
   color: white;
   background-color: rgb(50, 50, 50);
 }
+
+.router{
+  color: white;
+  margin: auto auto;
+  height: 55px;
+  width: 125px;
+  background-color: rgb(82, 77, 77);
+  border-radius: 5px;
+  border: 5px solid #135a7a;
+}
+
+a {
+  color: white;
+}
+a:hover {
+   color: purple;
+}

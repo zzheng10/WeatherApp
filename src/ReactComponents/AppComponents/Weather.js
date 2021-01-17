@@ -32,6 +32,8 @@ class Weather extends React.Component {
     render() {
         return (
             <div>
+                <br />
+                <br />
                 <div className="searchBar">
                     <input className="searchCity" name="city" value={this.state.city} placeholder="Enter City (e.g.London)" onChange={this.handleChange} />
                     <div className="searchButton">
@@ -40,7 +42,7 @@ class Weather extends React.Component {
                     </div>
                 </div >
                 <div className="weather">
-                    {!this.state.hasError && this.state.showWeather ? <WeatherComponent cityName={this.state.city} /> : null}
+                    {this.state.showWeather ? <WeatherComponent cityName={this.state.city} /> : null}
                 </div>
             </div>
         )
